@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for infos in info %}
+    {{ infos.email }}
+    {{ infos.phone_number }}
+    {{ infos.address }}
+{% endfor %}
+
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.first_name }}
+        {{ form.last_name }}
+        {{ form.phone_number }}
+        {{ form.email }}
+        {{ form.messages }}
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for portfolios in portfolio %}
+        <img src="{{ portfolios.banner.url }}" alt="banner">
+        <a href="{% url 'portfolio:detail' portfolios.id %}">{{ portfolios.title }}</a>
+
+
+    {% endfor %}
+</body>
+</html>
